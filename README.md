@@ -1,6 +1,6 @@
 ### Hack Reactor API Hackathon
 #### Create a RESTful API with a dataset of your chosing! 
-* You’ve been building backend APIs for your Chatterboxes, Shortly and Web Archiving apps. Now its time to put that knowledge to the test to build something that others outside the class can use! 
+* You’ve been building backend APIs for your Chatterboxes, Shortly and Web Archiving apps – now it's time to put that knowledge to the test by building something that others outside the class can use! 
 * I’d recommend starting by using Postman or curl-ing a small sample of data (or asking other participants for data they may have used previously), putting them in a JSON file or DB, and then building the URL endpoints and async controllers to perform and serve up queries for the data.
 * Bonus points if you can deploy the API server and data to Heroku, Azure, or another PaaS of your choosing! 
 
