@@ -11,7 +11,7 @@ characterRouter.route('/')
     })
   })
   .get(function(req, res) {
-    characterController.find(req.query, function(err, characters) {
+    characterController.retrieve(req.query, function(err, characters) {
       if (err) {
         return res.json({message: err});
       }
@@ -29,7 +29,7 @@ characterRouter.route('/')
 
 characterRouter.route('/:id')
   .get(function(req, res) {
-    characterController.find({_id: req.params.id}, function(err, character) {
+    characterController.findOne({_id: req.params.id}, function(err, character) {
       if (err) {
         return res.json({error: err});
       }
@@ -37,7 +37,7 @@ characterRouter.route('/:id')
     });
   })
   .put(function(req, res) {
-    characterController.updateById(req.params.id, req.body, function(err, character) {
+    characterController.updateOne(req.params.id, req.body, function(err, character) {
       if (err) {
         return res.json({error: err});
       }
@@ -45,7 +45,7 @@ characterRouter.route('/:id')
     });
   })
   .delete(function(req, res) {
-    characterController.deleteById(req.params.id, function(err, character, message) {
+    characterController.deleteOne(req.params.id, function(err, character, message) {
       if (err) {
         return res.json({error: err});
       }
