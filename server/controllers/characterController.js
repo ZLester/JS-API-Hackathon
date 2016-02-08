@@ -1,25 +1,68 @@
 var Character = require('../models/Character.js');
 
-exports.create = function(character, callback) {
-  Character.create(character, callback);
+exports.createOne = function(req, res) {
+  var newCharacter = req.body;
+  Character.create(newCharacter, function(err, response) {
+    if (err) {
+      return res.json(err);
+    }
+    res.json(response);
+  });
 };
 
-exports.retrieve = function(query, callback) {
-  Character.find(query, callback);
+exports.retrieve = function(req, res) {
+  var query = req.query;
+  Character.find(query, function(err, response) {
+    if (err) {
+      return res.json(err);
+    }
+    res.json(response);
+  });
 };
 
-exports.retrieveOne = function(query, callback) {
-  Character.findOne(query, callback);
+exports.retrieveOne = function(req, res) {
+  var query = {_id: req.params.id};
+  Character.findOne(query, function(err, response) {
+    if (err) {
+      return res.json(err);
+    }
+    res.json(response);
+  });
 };
 
-exports.updateOne = function(id, updated, callback) {
-  Character.findOneAndUpdate({_id: id}, updated, {new: true}, callback);
+exports.updateOne = function(req, res) {
+  var query = {_id: req.params.id};
+  var updatedProps = req.body;
+  var options = {new: true, upsert: true};
+  Character.findOneAndUpdate(query, updatedProps, options, function(err, response) {
+    if (err) {
+      return res.json(err);
+    }
+    res.json(response);
+  });
 };
 
-exports.delete = function(query, callback) {
-  Character.remove(query, callback);
+exports.delete = function(req, res) {
+  var query = req.query;
+  Character.find(query, function(err, response) {
+    if (err) {
+      re.json(err);
+    }
+    Character.remove(query, function(err) {
+      if (err) {
+        return res.json(err);
+      }
+      res.json(response);
+    });
+  });
 }
 
-exports.deleteOne = function(id, callback) {
-  Character.findOneAndRemove({_id: id}, callback);
+exports.deleteOne = function(req, res) {
+  var query = {_id: req.params.id};
+  Character.findOneAndRemove(query, function(err, response) {
+    if (err) {
+      return res.json(err);
+    }
+    res.json(response);
+  });
 };

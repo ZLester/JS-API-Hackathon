@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 8000;
-var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/apihackathon';
+var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/gameofthrones';
 
 var app = express();
 
@@ -20,8 +20,12 @@ app.get('/', function(req, res) {
 
 app.use('/api/characters', characterRouter);
 
-console.log('HR Hackathon Example API listening on ' + port);
 
-app.listen(port);  
+app.listen(port, function(err) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log('HR Hackathon Example API listening on ' + port);
+});  
 
 module.exports = app;

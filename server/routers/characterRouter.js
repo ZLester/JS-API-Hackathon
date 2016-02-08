@@ -2,55 +2,13 @@ var characterRouter = require('express').Router();
 var characterController = require('../controllers/characterController.js');
 
 characterRouter.route('/')
-  .post(function(req, res) {
-    characterController.create(req.body, function(err, result) {
-      if (err) {
-        return res.json({message: err});
-      }
-      res.json(result);
-    })
-  })
-  .get(function(req, res) {
-    characterController.retrieve(req.query, function(err, characters) {
-      if (err) {
-        return res.json({message: err});
-      }
-      res.json(characters);
-    });  
-  })
-  .delete(function(req, res) {
-    characterController.delete(req.body, function(err, statusMessage) {
-      if (err) {
-        return res.json({message: err});
-      }
-      res.json({messsage: 'Successfully removed ' + statusMessage.result.n + ' characters'});
-    })
-  });
+  .post(characterController.createOne)
+  .get(characterController.retrieve)
+  .delete(characterController.delete);
 
 characterRouter.route('/:id')
-  .get(function(req, res) {
-    characterController.findOne({_id: req.params.id}, function(err, character) {
-      if (err) {
-        return res.json({error: err});
-      }
-      res.json(character);
-    });
-  })
-  .put(function(req, res) {
-    characterController.updateOne(req.params.id, req.body, function(err, character) {
-      if (err) {
-        return res.json({error: err});
-      }
-      res.json(character);
-    });
-  })
-  .delete(function(req, res) {
-    characterController.deleteOne(req.params.id, function(err, character, message) {
-      if (err) {
-        return res.json({error: err});
-      }
-      res.json(character);
-    });
-  });
+  .get(characterController.retrieveOne)
+  .put(characterController.updateOne)
+  .delete(characterController.deleteOne);
 
 module.exports = characterRouter;
