@@ -7,7 +7,7 @@ var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/apihackathon';
 
 var app = express();
 
-var characterRouter; // TODO
+var characterRouter = require('./routers/characterRouter');
 
 mongoose.connect(dbUri);
 
