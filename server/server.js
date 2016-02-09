@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 8000;
-var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/gameofthrones';
+var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/apihackathon';
 
 var app = express();
 
