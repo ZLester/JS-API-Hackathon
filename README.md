@@ -6,7 +6,7 @@
 * Bonus points if you can deploy the API server and data to Heroku, Azure, or another PaaS of your choosing! 
 
 ### Places to find data sets
-#### I've included sample data sets for sales contacts, Game of Thrones characters, and the original 151 Pokemon, though feel free to find a dataset of your own choosing
+#### I've included sample data sets for sales contacts, Game of Thrones characters, and the original 151 Pokemon, though feel free to find your own!
 * https://github.com/HackerNews/API - documentation and samples of the official HN API
 * https://data.sfgov.org/ - Data from the City of San Francisco, including all fire and police responses
 * http://hckrnews.com/data/ - Archive of all Front Page Hacker News articles with their upvote and comment count
