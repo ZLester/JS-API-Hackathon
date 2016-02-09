@@ -46,7 +46,7 @@ exports.delete = function(req, res) {
   var query = req.query;
   Character.find(query, function(err, response) {
     if (err) {
-      re.json(err);
+      return res.json(err);
     }
     Character.remove(query, function(err) {
       if (err) {

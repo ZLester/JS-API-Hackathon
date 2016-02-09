@@ -20,7 +20,6 @@ app.get('/', function(req, res) {
 
 app.use('/api/characters', characterRouter);
 
-
 app.listen(port, function(err) {
   if (err) {
     return console.log(err);
