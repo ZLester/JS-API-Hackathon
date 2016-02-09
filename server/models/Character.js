@@ -1,13 +1,5 @@
 var mongoose = require('mongoose');
 
-var characterSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    unique: true
-  },
-  nickname: String,
-  house: String,
-  imageUrl: String
-});
+// Flesh out our character schema, register it with Mongoose, and export it
 
-module.exports = mongoose.model('Character', characterSchema);
+var characterSchema = new mongoose.Schema({});

@@ -7,7 +7,7 @@ var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/apihackathon';
 
 var app = express();
 
-var characterRouter = require('./routers/characterRouter.js');
+var characterRouter; // TODO
 
 mongoose.connect(dbUri);
 
@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
   res.json({message: 'Hack Reactor API Hackathon Example API'});
 })
 
-app.use('/api/characters', characterRouter);
+// TODO: Use the characterRouter as middleware on the '/api/characters' route
 
 app.listen(port, function(err) {
   if (err) {
