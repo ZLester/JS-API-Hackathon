@@ -5,7 +5,7 @@ var characterSchema = new mongoose.Schema({
     type: String,
     unique: true
   },
-  nickname: [String],
+  nickname: String,
   house: String,
   imageUrl: String
 });
