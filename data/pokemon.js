@@ -1,4 +1,4 @@
-[
+var pokemon = [
   {
     "number": 1,
     "name": "Bulbasaur",

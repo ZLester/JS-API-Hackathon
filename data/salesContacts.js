@@ -1,4 +1,4 @@
-[
+var salesContacts = [
   {
     "name": "Imogene F. Richards",
     "email": "Etiam.bibendum@vulputate.co.uk",
