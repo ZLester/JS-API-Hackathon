@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
   res.json({message: 'Hack Reactor API Hackathon Example API'});
-})
+});
 
 // TODO: Use the characterRouter as middleware on the '/api/characters' route
 
