@@ -1,4 +1,4 @@
-## Hack Reactor API Hackathon
+## API Hackathon
 ### Create a RESTful API with a dataset of your chosing! 
 * You’ve been building backend APIs for your Chatterboxes, Shortly and Web Archiving apps – now it's time to put that knowledge to the test by building something that others outside the class can use! 
 * You can use one of the sample datasets I've provided, or hunt down one of your own using some of the links below. 
