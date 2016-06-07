@@ -1,29 +1,24 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-
-var port = process.env.PORT || 8000;
-var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/apihackathon';
-
 var app = express();
+var port = 3000;
+
+// Inject middleware
+require('./middleware')(app);
+
+// Connect mongoose to our local database
+var dbUri = 'mongodb://localhost/apihackathon';
+mongoose.connect(dbUri);
 
 var characterRouter = require('./routers/characterRouter');
 
-mongoose.connect(dbUri);
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 app.get('/', function(req, res) {
-  res.json({message: 'Hack Reactor API Hackathon Example API'});
+  res.json({ message: 'HR Hackaton Example API' });
 });
 
 // TODO: Use the characterRouter as middleware on the '/api/characters' route
 
-app.listen(port, function(err) {
-  if (err) {
-    return console.log(err);
-  }
+app.listen(port, function() {
   console.log('HR Hackathon Example API listening on ' + port);
 });  
 
