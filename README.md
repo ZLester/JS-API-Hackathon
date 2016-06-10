@@ -13,5 +13,4 @@
 * http://hckrnews.com/data/ - Archive of all Front Page Hacker News articles with their upvote and comment count
 * https://www.reddit.com/dev/api - All things related to the Reddit API
 * https://www.reddit.com/r/datasets - A small-ish subreddit devoted to free datasets (sorting by top/all time usually yields the best results)
-* https://github.com/reddit/reddit/wiki/JSON - Describes the JSON obj you get from the Reddit JSON API
 * https://dev.twitter.com/rest/public - All things twitter
