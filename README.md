@@ -1,6 +1,5 @@
 ## API Hackathon
 ### Create a RESTful API with a dataset of your chosing! 
-* You’ve been building backend APIs for your Chatterboxes, Shortly and Web Archiving apps – now it's time to put that knowledge to the test by building something that others outside the class can use! 
 * You can use one of the sample datasets I've provided, or hunt down one of your own using some of the links below. 
 * Don't spend too much time gathering data! If you do decide to find your own dataset, I’d recommend starting by modeling a few items in JSON, using Postman or curl-ing a small sample of data, putting it in a JSON file or a simple mongo DB, and then building the URL endpoints and controllers to perform and serve up queries for the data.
 * Bonus points if you can deploy the API server and data to Heroku, Azure, or another PaaS of your choosing! 
