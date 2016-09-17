@@ -6,10 +6,6 @@
 
 ### Places to find data sets
 #### I've included sample data sets for sales contacts, Game of Thrones characters, and the original 151 Pokemon, though feel free to find your own!
-* https://github.com/toddmotto/public-apis - A great list of public API's to grab data from to populate your own API.
-* https://github.com/HackerNews/API - documentation and samples of the official HN API
-* https://data.sfgov.org/ - Data from the City of San Francisco, including all fire and police responses
-* http://hckrnews.com/data/ - Archive of all Front Page Hacker News articles with their upvote and comment count
-* https://www.reddit.com/dev/api - All things related to the Reddit API
+* https://github.com/jdorfman/awesome-json-datasets - An (awesome) list of JSON datasets that require no authentication
+* https://github.com/toddmotto/public-apis - A list of public API's to grab data from to populate your own API.
 * https://www.reddit.com/r/datasets - A small-ish subreddit devoted to free datasets (sorting by top/all time usually yields the best results)
-* https://dev.twitter.com/rest/public - All things twitter
