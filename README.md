@@ -7,5 +7,5 @@
 ### Places to find data sets
 #### I've included sample data sets for sales contacts, Game of Thrones characters, and the original 151 Pokemon, though feel free to find your own!
 * https://github.com/jdorfman/awesome-json-datasets - An (awesome) list of JSON datasets that require no authentication
-* https://github.com/toddmotto/public-apis - A list of public API's to grab data from to populate your own API.
+* https://github.com/toddmotto/public-apis - A list of public API's to grab data from.
 * https://www.reddit.com/r/datasets - A small-ish subreddit devoted to free datasets (sorting by top/all time usually yields the best results)
